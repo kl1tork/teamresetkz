@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ===== BACKGROUND GLOW ===== */
+.goldLight {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(212,175,55,0.25), transparent 60%);
+  filter: blur(90px);
+  top: 10%;
+  left: 50%;
+  animation: move 10s infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes move {
+  from { transform: translate(-50%, -40px); }
+  to { transform: translate(-50%, 80px); }
+}
+
+/* ===== PAGE ===== */
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== GOLD TEXT ===== */
+h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg,#fff3a0,#d4af37,#fff,#b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 46px;
+  background: linear-gradient(90deg,#fff3a0,#d4af37,#fff,#b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  color: white;
+}
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px 0;
+
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  background: linear-gradient(90deg,#fff3a0,#d4af37,#fff,#b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,55,0.2);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212,175,55,0.6);
+  box-shadow: 0 10px 40px rgba(212,175,55,0.15);
+}
+
+/* VIP CARD */
+.vip {
+  border: 1px solid gold;
+}
+
+/* ===== BUTTON ===== */
+button {
+  margin-top: 12px;
+  background: linear-gradient(90deg,#d4af37,#fff3a0);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(212,175,55,0.35);
+}
+
+/* ===== CASES ===== */
+.caseCard {
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.bigNumber {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.smallGold {
+  background: linear-gradient(90deg,#fff3a0,#d4af37,#fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.caseBox {
+  margin-top: 12px;
+  padding: 12px;
+  border-left: 2px solid gold;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+}
+
+.caseBox h3 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.caseBox p {
+  margin: 5px 0 0;
+  color: #ccc;
+}
+
+/* ===== MODAL ===== */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+}
+
+.modalBox input,
+.modalBox select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+.reviewText {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.reviewAuthor {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #d4af37;
+  opacity: 0.9;
+}
